@@ -8,6 +8,7 @@ import StateMessage from '../components/ui/StateMessage.jsx';
 import { useCart } from '../context/CartContext.jsx';
 import { useAsync } from '../hooks/useAsync.js';
 import { formatDate, statusLabel, statusTone } from '../utils/format.js';
+import { assetUrl } from '../utils/assets.js';
 
 export default function EventDetailPage() {
   const { id } = useParams();
@@ -34,7 +35,7 @@ export default function EventDetailPage() {
   return (
     <article className="event-detail">
       <Link to="/eventos" className="link">← Volver a la cartelera</Link>
-      <div className="event-detail__hero" style={{ backgroundImage: `url(${event.image})` }}>
+      <div className="event-detail__hero" style={{ backgroundImage: `url(${assetUrl(event.image)})` }}>
         <div className="event-detail__overlay">
           <Badge tone={statusTone(event.status)}>{statusLabel(event.status)}</Badge>
           <p className="eyebrow">{event.category}</p>

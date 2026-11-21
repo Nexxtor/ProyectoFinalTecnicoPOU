@@ -5,6 +5,7 @@ import StateMessage from '../components/ui/StateMessage.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useCart } from '../context/CartContext.jsx';
 import { formatCurrency, formatDate } from '../utils/format.js';
+import { assetUrl } from '../utils/assets.js';
 
 export default function CartPage() {
   const { items, subtotal, fees, total, increment, decrement, removeItem, clearCart } = useCart();
@@ -34,7 +35,7 @@ export default function CartPage() {
             const key = `${item.eventId}-${item.zoneId}`;
             return (
               <article className="cart-item" key={key}>
-                <img src={item.image} alt={item.eventTitle} />
+                <img src={assetUrl(item.image)} alt={item.eventTitle} />
                 <div>
                   <h3>{item.eventTitle}</h3>
                   <p>{formatDate(item.eventDate)} · {item.time || item.eventTime}</p>

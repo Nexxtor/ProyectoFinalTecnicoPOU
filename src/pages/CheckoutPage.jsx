@@ -9,6 +9,7 @@ import { useAuth } from '../context/AuthContext.jsx';
 import { useCart } from '../context/CartContext.jsx';
 import { formatCurrency, formatDate } from '../utils/format.js';
 import { validatePayment } from '../utils/validation.js';
+import { assetUrl } from '../utils/assets.js';
 
 export default function CheckoutPage() {
   const { session } = useAuth();
@@ -85,7 +86,7 @@ export default function CheckoutPage() {
           <div className="cart-list">
             {items.map((item) => (
               <article className="cart-item" key={`${item.eventId}-${item.zoneId}`}>
-                <img src={item.image} alt={item.eventTitle} />
+                <img src={assetUrl(item.image)} alt={item.eventTitle} />
                 <div>
                   <h3>{item.eventTitle}</h3>
                   <p>{formatDate(item.eventDate)} · {item.eventTime}</p>

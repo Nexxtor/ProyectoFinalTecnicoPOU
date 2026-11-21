@@ -1,12 +1,13 @@
 import { Link } from 'react-router';
 import Badge from '../ui/Badge.jsx';
 import { formatCurrency, formatDate, statusLabel, statusTone } from '../../utils/format.js';
+import { assetUrl } from '../../utils/assets.js';
 
 export default function EventCard({ event }) {
   return (
     <article className="event-card">
       <Link to={`/eventos/${event.id}`} className="event-card__image">
-        <img src={event.image} alt={event.title} loading="lazy" />
+        <img src={assetUrl(event.image)} alt={event.title} loading="lazy" />
         <Badge tone={statusTone(event.status)}>{statusLabel(event.status)}</Badge>
       </Link>
       <div className="event-card__body">

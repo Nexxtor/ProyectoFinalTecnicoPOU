@@ -7,10 +7,11 @@ import PageHeader from '../../components/ui/PageHeader.jsx';
 import StateMessage from '../../components/ui/StateMessage.jsx';
 import { useAsync } from '../../hooks/useAsync.js';
 import { validateEvent } from '../../utils/validation.js';
+import { normalizeAssetPath } from '../../utils/assets.js';
 
 const emptyForm = {
   title: '', category: '', date: '', time: '', venue: '', city: '',
-  description: '', image: '/images/event-1.svg', status: 'draft'
+  description: '', image: 'images/event-1.svg', status: 'draft'
 };
 
 export default function AdminEventFormPage() {
@@ -31,7 +32,7 @@ export default function AdminEventFormPage() {
       setForm({
         title: event.title, category: event.category, date: event.date, time: event.time,
         venue: event.venue, city: event.city, description: event.description,
-        image: event.image, status: event.status
+        image: normalizeAssetPath(event.image), status: event.status
       });
     }
   }, [event]);
@@ -104,7 +105,7 @@ export default function AdminEventFormPage() {
         <FormField label="Imagen" htmlFor="image" hint="Ruta de una imagen local de la carpeta public/images.">
           <select id="image" value={form.image} onChange={(event) => update('image', event.target.value)}>
             {[1, 2, 3, 4, 5, 6, 7, 8].map((number) => (
-              <option key={number} value={`/images/event-${number}.svg`}>Imagen {number}</option>
+              <option key={number} value={`images/event-${number}.svg`}>Imagen {number}</option>
             ))}
           </select>
         </FormField>
