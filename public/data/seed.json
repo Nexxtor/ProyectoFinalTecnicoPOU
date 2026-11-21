@@ -1,0 +1,622 @@
+{
+  "version": 1,
+  "users": [
+    {
+      "id": 1,
+      "name": "Ana Martínez",
+      "email": "cliente@eventos.test",
+      "password": "cliente123",
+      "role": "client",
+      "avatar": "AM"
+    },
+    {
+      "id": 2,
+      "name": "Carlos Rivera",
+      "email": "organizador@eventos.test",
+      "password": "organizador123",
+      "role": "organizer",
+      "avatar": "CR"
+    },
+    {
+      "id": 3,
+      "name": "Lucía Hernández",
+      "email": "admin@eventos.test",
+      "password": "admin123",
+      "role": "admin",
+      "avatar": "LH"
+    },
+    {
+      "id": 4,
+      "name": "Diego López",
+      "email": "diego@eventos.test",
+      "password": "diego123",
+      "role": "client",
+      "avatar": "DL"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Noche de Jazz",
+      "slug": "evento-1",
+      "category": "Música",
+      "date": "2026-12-05",
+      "time": "19:30",
+      "venue": "Teatro Nacional",
+      "city": "San Salvador",
+      "description": "Una noche de jazz contemporáneo con invitados nacionales y repertorio clásico.",
+      "image": "/images/event-1.svg",
+      "status": "published",
+      "organizerId": 2,
+      "featured": true,
+      "createdAt": "2026-10-01T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Concierto Sinfónico",
+      "slug": "evento-2",
+      "category": "Música",
+      "date": "2026-12-12",
+      "time": "18:00",
+      "venue": "Gran Sala",
+      "city": "San Salvador",
+      "description": "La orquesta sinfónica presenta un programa de Beethoven y Mahler.",
+      "image": "/images/event-2.svg",
+      "status": "published",
+      "organizerId": 2,
+      "featured": true,
+      "createdAt": "2026-10-02T10:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Teatro: La Casa de Bernarda Alba",
+      "slug": "evento-3",
+      "category": "Teatro",
+      "date": "2026-12-18",
+      "time": "20:00",
+      "venue": "Sala Escénica",
+      "city": "Antiguo Cuscatlán",
+      "description": "Puesta en escena de la obra de Federico García Lorca.",
+      "image": "/images/event-3.svg",
+      "status": "soldout",
+      "organizerId": 3,
+      "featured": false,
+      "createdAt": "2026-10-03T10:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Final de Fútbol",
+      "slug": "evento-4",
+      "category": "Deportes",
+      "date": "2027-01-10",
+      "time": "16:00",
+      "venue": "Estadio Universitario",
+      "city": "San Salvador",
+      "description": "Partido final del torneo universitario.",
+      "image": "/images/event-4.svg",
+      "status": "published",
+      "organizerId": 2,
+      "featured": true,
+      "createdAt": "2026-10-04T10:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "Festival de Danza",
+      "slug": "evento-5",
+      "category": "Danza",
+      "date": "2027-01-17",
+      "time": "17:30",
+      "venue": "Auditorio Central",
+      "city": "Santa Tecla",
+      "description": "Compañías invitadas presentan danza contemporánea y folclórica.",
+      "image": "/images/event-5.svg",
+      "status": "published",
+      "organizerId": 2,
+      "featured": false,
+      "createdAt": "2026-10-05T10:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "Stand-up Comedy",
+      "slug": "evento-6",
+      "category": "Comedia",
+      "date": "2027-01-24",
+      "time": "20:30",
+      "venue": "Foro Cultural",
+      "city": "San Salvador",
+      "description": "Una selección de comediantes presenta material inédito.",
+      "image": "/images/event-6.svg",
+      "status": "published",
+      "organizerId": 2,
+      "featured": false,
+      "createdAt": "2026-10-06T10:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "Exposición de Arte",
+      "slug": "evento-7",
+      "category": "Arte",
+      "date": "2027-02-07",
+      "time": "10:00",
+      "venue": "Galería Abierta",
+      "city": "Antiguo Cuscatlán",
+      "description": "Recorrido por obras de artistas emergentes de la región.",
+      "image": "/images/event-7.svg",
+      "status": "draft",
+      "organizerId": 2,
+      "featured": false,
+      "createdAt": "2026-10-07T10:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "Conferencia de Tecnología",
+      "slug": "evento-8",
+      "category": "Tecnología",
+      "date": "2027-02-21",
+      "time": "09:00",
+      "venue": "Centro de Convenciones",
+      "city": "San Salvador",
+      "description": "Charlas sobre desarrollo web, datos y producto digital.",
+      "image": "/images/event-8.svg",
+      "status": "published",
+      "organizerId": 3,
+      "featured": false,
+      "createdAt": "2026-10-08T10:00:00.000Z"
+    }
+  ],
+  "zones": [
+    {
+      "id": 11,
+      "eventId": 1,
+      "name": "General",
+      "price": 18.0,
+      "capacity": 120,
+      "available": 120,
+      "color": "#7cc4ff"
+    },
+    {
+      "id": 12,
+      "eventId": 1,
+      "name": "Preferente",
+      "price": 32.0,
+      "capacity": 60,
+      "available": 60,
+      "color": "#f08a01"
+    },
+    {
+      "id": 13,
+      "eventId": 1,
+      "name": "VIP",
+      "price": 55.0,
+      "capacity": 24,
+      "available": 24,
+      "color": "#9adfa8"
+    },
+    {
+      "id": 21,
+      "eventId": 2,
+      "name": "General",
+      "price": 18.0,
+      "capacity": 120,
+      "available": 120,
+      "color": "#7cc4ff"
+    },
+    {
+      "id": 22,
+      "eventId": 2,
+      "name": "Preferente",
+      "price": 32.0,
+      "capacity": 60,
+      "available": 60,
+      "color": "#f08a01"
+    },
+    {
+      "id": 23,
+      "eventId": 2,
+      "name": "VIP",
+      "price": 55.0,
+      "capacity": 24,
+      "available": 24,
+      "color": "#9adfa8"
+    },
+    {
+      "id": 31,
+      "eventId": 3,
+      "name": "General",
+      "price": 18.0,
+      "capacity": 120,
+      "available": 0,
+      "color": "#7cc4ff"
+    },
+    {
+      "id": 32,
+      "eventId": 3,
+      "name": "Preferente",
+      "price": 32.0,
+      "capacity": 60,
+      "available": 0,
+      "color": "#f08a01"
+    },
+    {
+      "id": 33,
+      "eventId": 3,
+      "name": "VIP",
+      "price": 55.0,
+      "capacity": 24,
+      "available": 0,
+      "color": "#9adfa8"
+    },
+    {
+      "id": 41,
+      "eventId": 4,
+      "name": "General",
+      "price": 18.0,
+      "capacity": 120,
+      "available": 120,
+      "color": "#7cc4ff"
+    },
+    {
+      "id": 42,
+      "eventId": 4,
+      "name": "Preferente",
+      "price": 32.0,
+      "capacity": 60,
+      "available": 60,
+      "color": "#f08a01"
+    },
+    {
+      "id": 43,
+      "eventId": 4,
+      "name": "VIP",
+      "price": 55.0,
+      "capacity": 24,
+      "available": 24,
+      "color": "#9adfa8"
+    },
+    {
+      "id": 51,
+      "eventId": 5,
+      "name": "General",
+      "price": 18.0,
+      "capacity": 120,
+      "available": 120,
+      "color": "#7cc4ff"
+    },
+    {
+      "id": 52,
+      "eventId": 5,
+      "name": "Preferente",
+      "price": 32.0,
+      "capacity": 60,
+      "available": 60,
+      "color": "#f08a01"
+    },
+    {
+      "id": 53,
+      "eventId": 5,
+      "name": "VIP",
+      "price": 55.0,
+      "capacity": 24,
+      "available": 24,
+      "color": "#9adfa8"
+    },
+    {
+      "id": 61,
+      "eventId": 6,
+      "name": "General",
+      "price": 18.0,
+      "capacity": 120,
+      "available": 120,
+      "color": "#7cc4ff"
+    },
+    {
+      "id": 62,
+      "eventId": 6,
+      "name": "Preferente",
+      "price": 32.0,
+      "capacity": 60,
+      "available": 60,
+      "color": "#f08a01"
+    },
+    {
+      "id": 63,
+      "eventId": 6,
+      "name": "VIP",
+      "price": 55.0,
+      "capacity": 24,
+      "available": 24,
+      "color": "#9adfa8"
+    },
+    {
+      "id": 71,
+      "eventId": 7,
+      "name": "General",
+      "price": 18.0,
+      "capacity": 120,
+      "available": 120,
+      "color": "#7cc4ff"
+    },
+    {
+      "id": 72,
+      "eventId": 7,
+      "name": "Preferente",
+      "price": 32.0,
+      "capacity": 60,
+      "available": 60,
+      "color": "#f08a01"
+    },
+    {
+      "id": 73,
+      "eventId": 7,
+      "name": "VIP",
+      "price": 55.0,
+      "capacity": 24,
+      "available": 24,
+      "color": "#9adfa8"
+    },
+    {
+      "id": 81,
+      "eventId": 8,
+      "name": "General",
+      "price": 18.0,
+      "capacity": 120,
+      "available": 120,
+      "color": "#7cc4ff"
+    },
+    {
+      "id": 82,
+      "eventId": 8,
+      "name": "Preferente",
+      "price": 32.0,
+      "capacity": 60,
+      "available": 60,
+      "color": "#f08a01"
+    },
+    {
+      "id": 83,
+      "eventId": 8,
+      "name": "VIP",
+      "price": 55.0,
+      "capacity": 24,
+      "available": 24,
+      "color": "#9adfa8"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1001,
+      "userId": 1,
+      "eventId": 1,
+      "items": [
+        {
+          "zoneId": 11,
+          "zoneName": "General",
+          "quantity": 2,
+          "unitPrice": 18.0
+        },
+        {
+          "zoneId": 13,
+          "zoneName": "VIP",
+          "quantity": 1,
+          "unitPrice": 55.0
+        }
+      ],
+      "subtotal": 91.0,
+      "fees": 5.46,
+      "total": 96.46,
+      "status": "paid",
+      "paymentMethod": "Tarjeta simulada",
+      "createdAt": "2026-11-01T15:20:00.000Z"
+    },
+    {
+      "id": 1002,
+      "userId": 4,
+      "eventId": 2,
+      "items": [
+        {
+          "zoneId": 22,
+          "zoneName": "Preferente",
+          "quantity": 2,
+          "unitPrice": 32.0
+        }
+      ],
+      "subtotal": 64.0,
+      "fees": 3.84,
+      "total": 67.84,
+      "status": "paid",
+      "paymentMethod": "Tarjeta simulada",
+      "createdAt": "2026-11-03T18:10:00.000Z"
+    },
+    {
+      "id": 1003,
+      "userId": 1,
+      "eventId": 4,
+      "items": [
+        {
+          "zoneId": 41,
+          "zoneName": "General",
+          "quantity": 4,
+          "unitPrice": 18.0
+        }
+      ],
+      "subtotal": 72.0,
+      "fees": 4.32,
+      "total": 76.32,
+      "status": "paid",
+      "paymentMethod": "Tarjeta simulada",
+      "createdAt": "2026-11-08T12:00:00.000Z"
+    },
+    {
+      "id": 1004,
+      "userId": 4,
+      "eventId": 6,
+      "items": [
+        {
+          "zoneId": 63,
+          "zoneName": "VIP",
+          "quantity": 2,
+          "unitPrice": 55.0
+        }
+      ],
+      "subtotal": 110.0,
+      "fees": 6.6,
+      "total": 116.6,
+      "status": "paid",
+      "paymentMethod": "Tarjeta simulada",
+      "createdAt": "2026-11-12T20:30:00.000Z"
+    },
+    {
+      "id": 1005,
+      "userId": 1,
+      "eventId": 2,
+      "items": [
+        {
+          "zoneId": 21,
+          "zoneName": "General",
+          "quantity": 1,
+          "unitPrice": 18.0
+        }
+      ],
+      "subtotal": 18.0,
+      "fees": 1.08,
+      "total": 19.08,
+      "status": "pending",
+      "paymentMethod": "Pendiente",
+      "createdAt": "2026-11-15T09:45:00.000Z"
+    }
+  ],
+  "tickets": [
+    {
+      "id": 5001,
+      "orderId": 1001,
+      "eventId": 1,
+      "zoneId": 11,
+      "zoneName": "General",
+      "code": "EV-1001-5001",
+      "qrPayload": "EVENTOS-UCA|ORDER:1001|TICKET:5001|EVENT:1",
+      "holderName": "Ana Martínez",
+      "status": "valid"
+    },
+    {
+      "id": 5002,
+      "orderId": 1001,
+      "eventId": 1,
+      "zoneId": 11,
+      "zoneName": "General",
+      "code": "EV-1001-5002",
+      "qrPayload": "EVENTOS-UCA|ORDER:1001|TICKET:5002|EVENT:1",
+      "holderName": "Ana Martínez",
+      "status": "valid"
+    },
+    {
+      "id": 5003,
+      "orderId": 1001,
+      "eventId": 1,
+      "zoneId": 13,
+      "zoneName": "VIP",
+      "code": "EV-1001-5003",
+      "qrPayload": "EVENTOS-UCA|ORDER:1001|TICKET:5003|EVENT:1",
+      "holderName": "Ana Martínez",
+      "status": "valid"
+    },
+    {
+      "id": 5004,
+      "orderId": 1002,
+      "eventId": 2,
+      "zoneId": 22,
+      "zoneName": "Preferente",
+      "code": "EV-1002-5004",
+      "qrPayload": "EVENTOS-UCA|ORDER:1002|TICKET:5004|EVENT:2",
+      "holderName": "Diego López",
+      "status": "valid"
+    },
+    {
+      "id": 5005,
+      "orderId": 1002,
+      "eventId": 2,
+      "zoneId": 22,
+      "zoneName": "Preferente",
+      "code": "EV-1002-5005",
+      "qrPayload": "EVENTOS-UCA|ORDER:1002|TICKET:5005|EVENT:2",
+      "holderName": "Diego López",
+      "status": "valid"
+    },
+    {
+      "id": 5006,
+      "orderId": 1003,
+      "eventId": 4,
+      "zoneId": 41,
+      "zoneName": "General",
+      "code": "EV-1003-5006",
+      "qrPayload": "EVENTOS-UCA|ORDER:1003|TICKET:5006|EVENT:4",
+      "holderName": "Ana Martínez",
+      "status": "valid"
+    },
+    {
+      "id": 5007,
+      "orderId": 1003,
+      "eventId": 4,
+      "zoneId": 41,
+      "zoneName": "General",
+      "code": "EV-1003-5007",
+      "qrPayload": "EVENTOS-UCA|ORDER:1003|TICKET:5007|EVENT:4",
+      "holderName": "Ana Martínez",
+      "status": "valid"
+    },
+    {
+      "id": 5008,
+      "orderId": 1003,
+      "eventId": 4,
+      "zoneId": 41,
+      "zoneName": "General",
+      "code": "EV-1003-5008",
+      "qrPayload": "EVENTOS-UCA|ORDER:1003|TICKET:5008|EVENT:4",
+      "holderName": "Ana Martínez",
+      "status": "valid"
+    },
+    {
+      "id": 5009,
+      "orderId": 1003,
+      "eventId": 4,
+      "zoneId": 41,
+      "zoneName": "General",
+      "code": "EV-1003-5009",
+      "qrPayload": "EVENTOS-UCA|ORDER:1003|TICKET:5009|EVENT:4",
+      "holderName": "Ana Martínez",
+      "status": "valid"
+    },
+    {
+      "id": 5010,
+      "orderId": 1004,
+      "eventId": 6,
+      "zoneId": 63,
+      "zoneName": "VIP",
+      "code": "EV-1004-5010",
+      "qrPayload": "EVENTOS-UCA|ORDER:1004|TICKET:5010|EVENT:6",
+      "holderName": "Diego López",
+      "status": "valid"
+    },
+    {
+      "id": 5011,
+      "orderId": 1004,
+      "eventId": 6,
+      "zoneId": 63,
+      "zoneName": "VIP",
+      "code": "EV-1004-5011",
+      "qrPayload": "EVENTOS-UCA|ORDER:1004|TICKET:5011|EVENT:6",
+      "holderName": "Diego López",
+      "status": "valid"
+    },
+    {
+      "id": 5012,
+      "orderId": 1005,
+      "eventId": 2,
+      "zoneId": 21,
+      "zoneName": "General",
+      "code": "EV-1005-5012",
+      "qrPayload": "EVENTOS-UCA|ORDER:1005|TICKET:5012|EVENT:2",
+      "holderName": "Ana Martínez",
+      "status": "valid"
+    }
+  ]
+}
