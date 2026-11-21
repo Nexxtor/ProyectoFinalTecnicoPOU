@@ -146,6 +146,29 @@ src/
 - `docs/como-revisar-el-historial.md` — comandos para recorrer la evolución.
 - `docs/capturas/` — capturas de la versión final.
 
+## Dependencias y auditoría
+
+La versión actual se verificó con `npm audit` sin vulnerabilidades conocidas.
+
+- Vite `8.3.8`.
+- React Router `8.5.2`.
+- jsdom `31.0.1`.
+- `@testing-library/jest-dom` `8.0.0`.
+- `@testing-library/user-event` `14.6.13`.
+
+`vite-plugin-pwa` 2.0.0 depende de `workbox-build` 7.4.1, que a su vez utiliza versiones de `glob` y `minimatch` afectadas por avisos de seguridad. Para mantener la compatibilidad con Vite 8 se conserva el plugin y se añaden overrides explícitos:
+
+```json
+{
+  "overrides": {
+    "glob": "14.0.6",
+    "minimatch": "11.0.9"
+  }
+}
+```
+
+La compilación y las pruebas se verificaron con esos overrides.
+
 ## Limitaciones
 
 - No hay backend ni base de datos real.

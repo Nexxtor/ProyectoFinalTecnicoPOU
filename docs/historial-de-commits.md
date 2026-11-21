@@ -33,3 +33,9 @@ El historial sigue el orden de construcción de la solución. Cada etiqueta repr
 - `leccion-5` corresponde a boletos, QR y administración.
 - `leccion-6` corresponde a PWA, offline y publicación.
 - `leccion-7` corresponde a calidad, pruebas y cierre.
+
+## Actualización de dependencias
+
+| Commit | Etiqueta | Mensaje | Contenido |
+| --- | --- | --- | --- |
+| `496b981` | `v1.0.1` | `chore(deps): actualizar dependencias y corregir auditoría` | Vite 8.3.8, React Router 8.5.2, jsdom 31, Testing Library actualizada y overrides de `glob`/`minimatch`. `npm audit` sin vulnerabilidades. |
